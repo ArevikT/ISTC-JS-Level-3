@@ -53,6 +53,11 @@ form{
      color: #B1B1B1;
      font-size: 11px;
  }
+ input[name ="password"]{
+    background: url("image/icon.png") no-repeat;
+     background-size: 8px;
+     background-position: 98%;
+    }
  .check{
      transform: translateX(55px);
  }
@@ -81,6 +86,11 @@ input[type=submit]{
 .lastA{
     color: #313131;
     font-weight: bold;
+}
+span{
+    text-align: center;
+    color: red;
+    font-size: 12px;
 }
 
  

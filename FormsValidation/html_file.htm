@@ -10,24 +10,28 @@
 <body>
     <div class="wrap1">
         <div class="wrap2">
-        <form action="">
+        <form action="http://rest.learncode.academy/api/learncode/friends"  method="post" >
                 <label class="first">CREATE ACCOUNT</label>
-            <input type="text" name="name" class="data" placeholder="Name">
-            <input type="text" name="surname" class="data" placeholder="Surname">
-            <input type="email" name="email" class="data" placeholder="Your Email">
-            <input type="password" name="password" class="data" placeholder="Password">
-            <input type="password" name="confirm password" class="data" placeholder="Repeat your password">
+            <input type="text" id="name" class="data" placeholder="Name">
+               <span id="errorName"></span>
+            <input type="text" id="surname" class="data" placeholder="Surname">
+               <span id="errorSurname"></span>
+            <input type="email" id="email" class="data" placeholder="Your Email">
+               <span id="errorEmail"></span>
+            <input type="password" id="password" class="data" placeholder="Password">
+               <span id="errorPassword"></span>
+            <input type="password" id="confirm_password" class="data" placeholder="Repeat your password">
+               <span id="errorConfirmPassword"></span>
              <div class="check">
                 <input type="checkbox" name="agree">
                 <label class="second">I aggri all statements in <a href="">Terms of service</a></label>
              </div>
-            <input type="submit" name="submit" value="SIGN UP">
+            <input type="submit" name="submit" value="SIGN UP" onclick="myFunction()">
         <div class="login">Have already an account?<a  class="lastA"href="">Login Here</a></div>
         </form>
 
        </div>
     </div>
-
 
     <script src="js_file.js"></script>
 </body>
