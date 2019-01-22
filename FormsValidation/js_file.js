@@ -14,29 +14,33 @@
 
         document.getElementById("name").style.borderColor= "red";
         document.getElementById("errorName").innerHTML = "Is invalid";
-        
+            return false;
          }
     if ( regexName.test(surname) === false ){
 
       document.getElementById("surname").style.borderColor= "red";
       document.getElementById("errorSurname").innerHTML = "Is invalid";
-      
+           return false;
         }
     if ( regexEmail.test(email) === false ){
 
       document.getElementById("email").style.borderColor= "red";
       document.getElementById("errorEmail").innerHTML = "Sample characters@characters.domain";
+           return false;
         }
     if ( regexPassword.test(password) === false ){
 
       document.getElementById("password").style.borderColor= "red";
       document.getElementById("errorPassword").innerHTML = "Your Password Should Contain At Least 8 Characters, 1 Number, 1 Upper And 1 Lower";
-         }
+           return false;
+       }
      if( confirm_password !== password ) {
 
       document.getElementById("password").style.borderColor= "red";
       document.getElementById("errorConfirmPassword").innerHTML = "Is invalid";
+          return false;
          }
+
  var obj = {
   name: name,
   surname: surname,
@@ -46,7 +50,6 @@
  };
  console.log(obj);
  
-
    fetch('http://rest.learncode.academy/api/learncode/friends', {
         method: "POST",
         headers: {
