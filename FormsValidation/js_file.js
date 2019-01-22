@@ -4,7 +4,7 @@
     var surname = document.getElementById("surname").value;
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-    var confirm_password = document.getElementById("confirm_password");
+    var confirm_password = document.getElementById("confirm_password").value;
 
     var regexName = /^[a-zA-Z]+$/;
     var regexEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
@@ -37,9 +37,6 @@
       document.getElementById("password").style.borderColor= "red";
       document.getElementById("errorConfirmPassword").innerHTML = "Is invalid";
          }
-
-    return false;
-}
  var obj = {
   name: name,
   surname: surname,
@@ -47,8 +44,9 @@
   password: password,
   confirm_password: confirm_password
  };
+ console.log(obj);
  
- if (name && surname && email) {
+
    fetch('http://rest.learncode.academy/api/learncode/friends', {
         method: "POST",
         headers: {
@@ -62,9 +60,9 @@
         document.getElementById("demo").innerHTML +="Nname:"+ name + "<br>";
         document.getElementById("demo").innerHTML += "Surname:" + surname + "<br>";
         document.getElementById("demo").innerHTML += "Email:" + email;
-        document.getElementById("main").style.display = "blok";
+        // document.getElementById("main").style.display = "blok";
        
      console.log("You saved this item", response); //returns the new item along with its ID
    }) 
-
   }
+  
