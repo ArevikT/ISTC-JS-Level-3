@@ -36,7 +36,8 @@ form{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;       
+    justify-content: space-around;   
+        
 }
  .first{
     display: block;
@@ -99,11 +100,12 @@ span{
 }
 
 #demo{
-    color: #ECFFFF;
-    text-align: center;
-    transform: translateY(100px);
-    display: none;
-}
+     color: #ECFFFF;
+     position: relative;
+     right: 50%;  
+     transform: translateY(300px);
+    
+    }
 
 @media screen and (max-width: 505px){
  .first_a{
