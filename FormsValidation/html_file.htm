@@ -8,32 +8,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrap1">
+    <div class="wrap1"> 
         <div class="wrap2">
-        <form action="" id="form">
-                <label class="first">CREATE ACCOUNT</label>
-            <input type="text" id="name" class="data" placeholder="Name">
-               <span id="errorName"></span>
-            <input type="text" id="surname" class="data" placeholder="Surname">
-               <span id="errorSurname"></span>
-            <input type="email" id="email" class="data" placeholder="Your Email">
-               <span id="errorEmail"></span>
-            <input type="password" id="password" class="data" placeholder="Password">
-               <span id="errorPassword"></span>
-            <input type="password" id="confirm_password" class="data" placeholder="Repeat your password">
-               <span id="errorConfirmPassword"></span>
-             <div class="check">
-                <input type="checkbox" name="agree">
-                <label class="second">I aggri all statements in <a class= "first_a" href="">Terms of service</a></label>
-             </div>
-            <input type="button" name="button" value="SIGN UP" onclick="myFunction()">
-        <div class="login">Have already an account?<a  class="last_a" href="">Login Here</a></div>
-        </form>
-       <p id="demo"></p>
-       </div>
-    </div>
-
-    <script src="js_file.js"></script>
+          <div id="wrap">
+              <div id="sign">
+                <div id="signUP">SIGN UP</div>
+                <div id="signIN">SIGN IN</div>
+            </div>
+                <form action="" id="form1">
+                        <input type="text" id="name" class="data" placeholder="Name">
+                        <span id="errorName"></span>
+                     <input type="text" id="surname" class="data" placeholder="Surname">
+                        <span id="errorSurname"></span>
+                     <input type="email" id="email" class="data" placeholder="Your Email">
+                        <span id="errorEmail"></span>
+                     <input type="password" id="password" class="data" placeholder="Password">
+                        <span id="errorPassword"></span>
+                     <input type="password" id="confirmPassword" class="data" placeholder="Repeat your password">
+                        <span id="errorConfirmPassword"></span>
+                      <div class="check">
+                         <input type="checkbox" name="agree">
+                         <label>aggri all statements in <a href="">Terms of service</a></label>
+                      </div>
+                      <input type="button" id="createAccount" class="data"  value="CREATE ACCOUNT">
+                     <div id="lastDiv">Have already an account?<a  class="last_a" href="">Login Here</a></div>
+                </form>
+                  <form action="" id="form2">
+                      <input type="text" id="username" class="data" placeholder="Username" >
+                        <span id="errorUsername"></span>
+                      <input type="password" id="pass" class="data" placeholder="Password" >
+                        <span id="errorPass"></span>
+                        <input type="button" class="data" id="logIn" value="LOG IN">
+                 </form> 
+                 <p id="demo"></p>
+          </div>
+        </div>
+     </div>
+  <script src="js_file.js"></script>
 </body>
 </html>
 
