@@ -16,6 +16,7 @@ body{
 }
 .conteiner{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;   
 }
 .section_1{
@@ -55,6 +56,7 @@ header{
     background-size:contain;
     background-repeat: no-repeat;
     background-size: 90% 100%;
+    pointer-events: none;
  }
 .text{
     display: flex;
@@ -196,7 +198,7 @@ header {
     }
    
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
     .menu{   
            display: flex;
            flex-direction: column;
