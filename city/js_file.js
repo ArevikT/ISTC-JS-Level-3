@@ -16,13 +16,25 @@ for( i = 0; i<8; i++ ){
     div1[i].style.width = "120px";
     div1[i].style.height = "120px";
 }
-var x = document.getElementById("menus").style.display = "none"
-function myFunction(){
-    if(document.getElementById("menus").style.display == "none"){
+// var x = document.getElementById("menus").style.display = "none"
+// function myFunction(){
+//     if(document.getElementById("menus").style.display == "none"){
         
-        document.getElementById("menus").style.display = "flex";
+//         document.getElementById("menus").style.display = "flex";
+//     }
+    
+//       else  document.getElementById("menus").style.display = "none"
+    
+// }
+
+// var x = document.getElementById("vertical").style.display = "none"
+function myFunction(){
+    if(document.getElementById("vertical").style.display == "none"){
+        
+        document.getElementById("vertical").style.display = "flex";
+        document.getElementById("vertical").style.flexDirection = "column";
     }
     
-      else  document.getElementById("menus").style.display = "none"
+      else  document.getElementById("vertical").style.display = "none"
     
 }
