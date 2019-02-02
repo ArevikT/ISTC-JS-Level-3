@@ -237,14 +237,14 @@ h3{
       
     }
 @media screen and (max-width: 800px) {       
-          .logo{
+          /* .logo{
             background-size: 100% 100%;
             background-repeat: no-repeat;
           }
           
-        }
+        } */
     
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 677px) {
    
         header{
             display: none;
