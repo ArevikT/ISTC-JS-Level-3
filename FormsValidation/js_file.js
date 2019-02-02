@@ -88,8 +88,7 @@ function myFunctionUsername(){
     if( regexName.test(username) === false ){
         document.getElementById("errorUsername").style.display = "block"
         document.getElementById("errorUsername").innerHTML = "Must be in letters only";
-          return 
-        document.getElementById("username").style.borderColor= "red";
+          return document.getElementById("username").style.borderColor= "red";
     }else{
         document.getElementById("errorUsername").style.display = "none"
         return document.getElementById("username").style.borderColor= "green";
@@ -119,8 +118,16 @@ function createACCOUNT(){
         password: document.getElementById("password").value,
         confirmPassword: document.getElementById("confirmPassword").value
       };
-      console.log(objSignUp);
-
+      let regexName = /^[a-zA-Z]+$/;
+      let name = document.getElementById("name").value;
+      let surname = document.getElementById("surname").value;
+      let regexEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+      let email = document.getElementById("email").value;
+      let confirmPassword = document.getElementById("confirmPassword").value;
+      let password = document.getElementById("password").value;
+      let regexPassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+    
+if( regexName.test(name) === true && regexName.test(surname) === true && regexEmail.test(email) === true && regexPassword.test(password) === true && confirmPassword === password){
       fetch('http://rest.learncode.academy/api/learncode/friends', {
         method: "POST",
         headers: {
@@ -128,43 +135,46 @@ function createACCOUNT(){
      },
      body: JSON.stringify(objSignUp),
    })
-   .then(response => response.json()) // response.json() returns a promise
+   .then(response => response.json()) 
    .then((response) => {
-        
+
         document.getElementById("demo").innerHTML +="Nname:"+ " " + document.getElementById("name").value + "<br>";
         document.getElementById("demo").innerHTML += "Surname:" + " " + document.getElementById("surname").value + "<br>";
         document.getElementById("demo").innerHTML += "Email:" + " " + document.getElementById("email").value;
           
        }) 
-   
+    }
 
 }
 
    logIn.addEventListener("click", logIN);
-function logIN(){
+ function logIN(){
         let objSignIn = {
             username: document.getElementById("username").value,
             password: document.getElementById("pass").value   
       };
       console.log(objSignIn);
-    // if(document.getElementById("pass").style.borderColor= "green" && document.getElementById("pass").style.borderColor= "green" ) {
+      let regexName = /^[a-zA-Z]+$/;
+      let username = document.getElementById("username").value;
+      let regexPassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+      let pass = document.getElementById("pass").value;
+      if( regexName.test(username) === true && regexPassword.test(pass) === true ){
       fetch('http://rest.learncode.academy/api/learncode/friends', {
         method: "POST",
         headers: {
        "Content-Type": "application/json",
      },
      body: JSON.stringify(objSignIn),
-   })
-   .then(response => response.json()) // response.json() returns a promise
+    })
+   .then(response => response.json()) 
    .then((response) => {
         
         document.getElementById("demo").innerHTML +="Username:"+ " " + document.getElementById("username").value + "<br>";
         document.getElementById("demo").innerHTML += "Password:" + " " + document.getElementById("pass").value;
-       
-             
-     console.log("You saved this item", response); //returns the new item along with its ID
-   }) 
- 
+        console.log("You saved this item", response); 
+   })        
+   
+   }
 }
 
   
