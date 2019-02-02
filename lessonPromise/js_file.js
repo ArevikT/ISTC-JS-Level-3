@@ -1,0 +1,15 @@
+fetch("https://jsonplaceholder.typicode.com/todos")
+
+.then(response => response.json())
+  
+.then(response=> {
+    
+  for(let i = 50; i< 55; i++){
+    var myLi = document.createElement("li");
+       for(var key in response[i]){
+        // console.log(response[i], "resp");
+            document.getElementById("ul").appendChild(myLi).innerHTML += key + response[i][key]+ " ";
+    
+        }
+    }
+    })
