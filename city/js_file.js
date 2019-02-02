@@ -38,3 +38,9 @@ function myFunction(){
       else  document.getElementById("vertical").style.display = "none"
     
 }
+var body = document.getElementById("main");
+function myFunction1() {
+    if(body.clientWidth > "472") {
+        document.getElementById("vertical").style.display = "none"
+    }
+}

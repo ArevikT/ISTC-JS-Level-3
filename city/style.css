@@ -46,16 +46,14 @@ header{
     margin: 0 auto;
     margin-bottom: 10%;
     display: flex;
-    justify-content: space-between;
-      
+    justify-content: space-between;   
 }
 .logo{
-    width: 15%;
+    width: 70%;
     height: 100%;
     background-image: url("images/logo.png");
     background-size:contain;
     background-repeat: no-repeat;
-    background-size: 90% 100%;
     pointer-events: none;
  }
  #logo1{
@@ -239,13 +237,14 @@ h3{
       
     }
 @media screen and (max-width: 800px) {       
-          .text{
-              display: none;
+          .logo{
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
           }
           
         }
     
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 590px) {
    
         header{
             display: none;
@@ -254,7 +253,7 @@ h3{
             display: block;
         }
         #vertical{
-            
+            display: none;
         }
        
     }
