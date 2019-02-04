@@ -10,6 +10,7 @@ function myAddFunction(){
     var spanInput = document.createElement("span");
     var iconDel = document.createElement("i");
 
+    spanInput.style.color = "green";
     wrap.insertBefore(inputDiv, wrap.childNodes[0]);
     inputDiv.id = "addDiv";
     document.getElementById("addDiv").appendChild(iconCheck);
@@ -30,8 +31,8 @@ function myAddFunction(){
             this.style.color = "green";
             this.parentElement.getElementsByTagName("span")[0].style.textDecoration = "none";
             this.parentElement.getElementsByTagName("span")[0].style.color = "green";
-        }
-    }
+        };
+    };
     document.getElementsByClassName("fas fa-trash-alt")[0].addEventListener("click", myFunctionDelete);
 
     function myFunctionDelete() {
@@ -41,12 +42,35 @@ function myAddFunction(){
         var index = arr.indexOf(contentSpan);
         arr.splice(index,1);
         //console.log(arr);   
-    }
-}  
-showAll.addEventListener("click", myFunctionShowAll);
+    };
+};
 
-function myFunctionShowAll{
-    if(){
+var spans = document.getElementsByTagName("span");
 
-    }
-}
+function myFunctionShowAll(){
+    for (let i=0; i < spans.length; i++) {
+        spans[i].parentElement.style.display = "flex";
+    };
+};
+
+function myFunctionShowActive() {
+    for (let j = 0; j < spans.length; j++) {
+        spans[j].parentElement.style.display = "flex";
+    };
+    for (let i=0; i < spans.length; i++) {
+        if (spans[i].style.color === "red") {
+           spans[i].parentElement.style.display = "none";
+        };
+    };
+};
+
+function myFunctionShowCompleted() {
+    for (let j = 0; j < spans.length; j++) {
+        spans[j].parentElement.style.display = "flex";
+    };
+    for (let i=0; i < spans.length; i++) {
+        if (spans[i].style.color === "green") {
+            spans[i].parentElement.style.display = "none";
+        };
+    };
+};
