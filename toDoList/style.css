@@ -1,0 +1,18 @@
+#addDiv{
+    width: 70%;
+    border: 1px solid rgb(187, 181, 181);
+    display: flex;
+    }
+#addDiv>*{
+    padding: 7px;
+}
+span{
+    flex-grow: 1;
+    color: green;
+}
+.fa-check-square{
+    color: green;
+}
+.fa-trash-alt{
+    color: rgb(187, 181, 181);
+}

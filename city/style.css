@@ -15,23 +15,24 @@ body{
     margin: 0 auto;
 }
 .conteiner{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;   
 }
 .section_1{
     width: 100%;
-    /* height: 300px; */
-    height: auto;
     background-image: url("images/slide1\ \(2\).jpg");
     background-size:cover;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .icon{
     display: flex;
     justify-content: center;
+    margin-bottom: 1%;
 }
 i{
     padding: 5px;
@@ -43,7 +44,7 @@ i{
 }
 header{
     width: 60%;
-    height: 15%;
+    height: 30px;
     background-color: white;
     margin: 0 auto;
     margin-bottom: 10%;
@@ -52,14 +53,13 @@ header{
 }
 .logo{
     width: 15%;
-    height: 100%;
     background-image: url("images/logo.png");
-    background-size:cover;
+    background-size:contain;
     background-repeat: no-repeat;
  }
  #logo1{
     width: 15%;
-    height: 50px;
+    height: 45px;
     background-image: url("images/logo.png");
     background-size:contain;
     background-repeat: no-repeat;
@@ -68,11 +68,10 @@ header{
     display: none;
  }
  #vertical{
-     width: 20%;
-     background-color: #FFFFFF;
+     width: 80%;
+     background-color: rgba(236, 83, 63, 0.301);
      margin: 0 auto;
-     display: none;
-     
+     display: none; 
  }
  .verticalMenu{
      list-style: none;
@@ -85,7 +84,7 @@ header{
 .text{
     display: flex;
     align-items: center;
-    flex-basis: 60%;
+    flex-grow: 1;
     color: #EC523F;
     
 }
@@ -103,6 +102,9 @@ li{
     margin-right: 15px;
     color: #454846;
 }
+li:hover{
+    color: #EC523F;
+}
 ul>:first-child{
     color: #EC523F;
 }
@@ -116,6 +118,7 @@ hr{
 }
 .let{
     color:#F3F0EB;
+    margin: 2%;
 }
 button{
     width: 110px;
@@ -125,7 +128,8 @@ button{
     background-color: #EC523F;
     color: #FEFFFF;
     font-size: 8px;
-    margin: 0 auto;
+    margin: 2% auto;
+    
 }
 .section_2{
     width: 100%;
@@ -138,6 +142,9 @@ button{
     align-items: center;
     margin-bottom: 30px;
     margin-top: 30px;
+}
+h2{
+    margin:2%;
 }
 h3{   
     color: #454846;
@@ -166,6 +173,9 @@ h3{
 }
 .img3{
     background-color: #2DCC72;
+}
+.section_3{
+    height: 40%;
 }
 #second{
     width: 70%;
@@ -220,13 +230,8 @@ h3{
 }
    
 @media screen and (max-width: 1080px) {
-    #first { 
-        width: 50%;
-        display: flex;
-       margin: 0 auto;        
-      }
-      #second{
-         width: 50%;
+       #second{
+         width: 70%;
       }
 
       li{
@@ -239,7 +244,7 @@ h3{
     }
 @media screen and (max-width: 920px) {   
     .header{
-        width: 50%;
+       
     }    
           .logo{
             background-size: 90% 100%;
@@ -247,6 +252,13 @@ h3{
           }
           
         }
+@media screen and (max-width: 667px) { 
+    #first{
+       width: 70%;
+       margin: 0 auto;
+
+    } 
+}    
     
 @media screen and (max-width: 500px) {
    
