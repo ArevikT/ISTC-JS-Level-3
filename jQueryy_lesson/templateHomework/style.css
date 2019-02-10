@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+    margin: auto;
+    cursor: pointer;
+}
+#menu{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    background-color: white;
+    position: fixed;
+}
+.logo{
+    width: 40%;
+    background-position: center;
+    background-image: url(images/logoeasyaudit.png);
+    background-repeat: no-repeat;
+    padding: 30px;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+li,.fa-user{
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #3A3C3E;
+}
+ul>:nth-child(1){
+    color:#37CA8A; 
+}
+.fa-user{
+    font-size: 20px;
+    color: rgb(170, 174, 179);
+}
+ul>*:hover, h1:hover{
+   color:#37CA8A;
+}
+.slideshow-container{
+    width: 100%; 
+    margin: auto;
+}
+.mySlides {
+    display: none;
+}
+.second-conteiner{
+    width: 100%;
+    display: flex;
+    border: none;
+ 
+    
+}
+.second-conteiner>*{
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:0.2px solid #E5E7E9;
+    padding: 60px 30px 60px;
+    border-top:none;   
+}  
+i{
+    font-size: 30px;
+    padding: 30px;
+}
+span{
+   line-height:25px; 
+   font-family: roboto,sans-serif;
+   font-size: 15px;
+   padding-left: 50px; 
+}
+ 
+ .prev, .next  {
+    width: 30px;
+    height: 30px;
+    margin-top: -15%;
+    margin-left: 20%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    
+    transform: rotate(50deg);
+    color: white;
+    border: 0.5px solid white;
+  } 
+   .next {
+    margin-left: 70%;
+  } 
+  .prev:hover, .next:hover{
+    background-color: #37CA8A;
+  }
+  
+ 
