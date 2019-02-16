@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function Person(name,surname,age,nationality){
+           this.name = name;
+           this.surname = surname;
+           this.age = age;
+           this.nationality = nationality;
+           this.fullInfo = function(){
+             return "INFO:" + this.name + " " + this.surname + " " + this.age + " " +  this.nationality ;
+           }
+       }
+
+       function Armenian(name,surname,age,nationality,location){
+           Person.call(this,name,surname,age,nationality);
+           this.location = location;
+           console.log(this.fullInfo() + " " + this.location);
+
+           
+       }    
+     var armenian = new Armenian("Arevik","Tovmasyan",35, "armenian", "Yerevan");
+        
+
+      function Armenian1(name,surname,age,nationality,location){
+          Armenian.call(this,name,surname,age,nationality,location);
+         
+          
+      }
+
+      var armenian1 = new Armenian1("Aram","Tovmasyan",15, "armenian", "Yerevan");
+     
+
+
+
+    
+     function Russian(name,surname,age,nationality){
+           Person.call(this,name,surname,age,nationality);
+           this.fullInfo();
+       }
+
+    var russian = new Russian("Ivan","Petrov",30, "Russian");
+    
+    </script>
+
+</body>
+</html>

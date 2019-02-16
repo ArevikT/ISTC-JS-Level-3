@@ -21,6 +21,7 @@ html{
     background-image: url(images/logoeasyaudit.png);
     background-repeat: no-repeat;
     padding: 30px;
+    
 }
 ul{
     display: flex;
@@ -65,6 +66,7 @@ ul>*:hover, h1:hover{
     border:0.2px solid #E5E7E9;
     padding: 60px 30px 60px;
     border-top:none;   
+   
 }  
 i{
     font-size: 30px;
@@ -85,7 +87,6 @@ span{
     position: absolute;
     display: flex;
     align-items: center;
-    
     transform: rotate(50deg);
     color: white;
     border: 0.5px solid white;
@@ -137,16 +138,16 @@ span{
   }
   #numbers{
       width: 100%;
-      padding-top: 5%;
       display: flex;
       justify-content: center;
+      padding-bottom: 15px;
   }
   .num{
       font-size: 70px;
       color:#37CA8A; 
   }
   .section{
-      width:23% ;
+      width:15% ;
       padding-top: 30px;
       border-right:0.1px solid #74787C;
       transform:rotateZ(15deg);
