@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span>Tag</span>
+        <input type="text" id="tag">
+        <span>Color</span>
+        <input type="text" id="color">
+        <span>Text</span>
+        <input type="text" id="text">
+        <span>Background</span>
+        <input type="text" id="background">
+        <button onclick="myFunction()">Create</button>
+    </div>
+    <script>
+        function myFunction(){
+            var tagName = document.getElementById("tag").value;
+            var color = document.getElementById("color").value;
+            var text = document.getElementById("text").value;
+            var background = document.getElementById("background").value;
+           
+            function Create(tagName,color,text,background){
+                this.elem = document.createElement(tagName);
+                this.elemColor = this.elem.style.color = color;
+                this.elemText = this.elem.innerHTML = text;
+                this.elemBakground = this.elem.style.backgroundColor = background;
+                
+                document.body.appendChild(this.elem);
+            }
+             element = new Create(tagName,color,text,background);
+
+             document.getElementById("tag").value = "";
+             document.getElementById("color").value = "";
+             document.getElementById("text").value = "";
+            document.getElementById("background").value = "";
+           
+
+        }
+        
+
+
+       
+    
+    </script>
+</body>
+</html>
