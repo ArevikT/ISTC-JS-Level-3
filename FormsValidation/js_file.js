@@ -168,10 +168,11 @@ if( regexName.test(name) === true && regexName.test(surname) === true && regexEm
     })
    .then(response => response.json()) 
    .then((response) => {
-        
+     
         document.getElementById("demo").innerHTML +="Username:"+ " " + document.getElementById("username").value + "<br>";
         document.getElementById("demo").innerHTML += "Password:" + " " + document.getElementById("pass").value;
         console.log("You saved this item", response); 
+      
    })        
    
    }
